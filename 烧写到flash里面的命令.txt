@@ -1,0 +1,12 @@
+mtd_erase /dev/mtd0 
+devcp tftp://192.168.2.180/rtthread.elf /dev/mtd0
+set al /dev/mtd0 
+reboot
+
+远程tftp加载
+set al tftp://192.168.2.180/rtthread.elf 
+reboot        
+
+
+设置IP：
+set ifconfig syn0:192.168.2.10  //固定存在
